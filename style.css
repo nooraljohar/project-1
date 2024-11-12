@@ -1,0 +1,15 @@
+body {
+    background-color:bisque;
+
+}
+
+table {
+    width: 35%; 
+    border-collapse:separate;
+}
+
+tr, td {
+    border: 1px solid #ccc;
+    padding: 8px; 
+
+}
