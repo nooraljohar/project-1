@@ -1,15 +1,47 @@
 body {
-    background-color:bisque;
-
+margin: 0;
+height: 100vh;  
+background-color:black;
 }
 
-table {
-    width: 35%; 
-    border-collapse:separate;
+table { 
+width: 30%;     
+border-collapse:separate;
+padding:0 0 0 120px ;
 }
 
 tr, td {
-    border: 1px solid #ccc;
-    padding: 8px; 
+border: 1px solid hsl(102, 68%, 59%);
+padding: 20px; 
+display: flex;
+}
 
+aside {
+flex-direction: column;
+position: relative;
+top: -500px;
+left: 400px;
+color:white;
+}
+
+h1 {
+padding:0 130px 0 130px ;
+color: white;
+}
+
+h2 {
+padding:0 130px 0 130px ;
+color: white;
+}
+
+button {
+position: relative;
+top: -390px;
+left : 120px;
+}
+
+input {
+position: relative;
+top: -390px;
+left : 140px;
 }
