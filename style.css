@@ -1,26 +1,27 @@
 body {
 margin: 0;
 height: 100vh;  
-background-color:black;
+background-color:rgb(71, 71, 165);
 }
 
 table { 
-width: 30%;     
+width: 25%;     
 border-collapse:separate;
-padding:0 0 0 120px ;
+padding:0 0 0 110px ;
 }
 
 tr, td {
 border: 1px solid hsl(102, 68%, 59%);
-padding: 20px; 
+padding: 15px; 
 display: flex;
+
 }
 
 aside {
 flex-direction: column;
 position: relative;
-top: -500px;
-left: 400px;
+top: -400px;
+left: 380px;
 color:white;
 }
 
