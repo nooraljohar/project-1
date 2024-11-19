@@ -9,7 +9,9 @@ let Guess = 0;
 let rightWord ="";
 let feedback 
 let letters
-let round = 0;
+let round = 0
+let playerGuess 
+let cell 
 /*--------------------------------cached element refrence -----------------------------------*/
 
 const start = document.getElementById('start game');
@@ -41,51 +43,52 @@ const startGame = () => {
 
 start.addEventListener("click" , startGame);
 
-//function to take data from input field and split it 
+//function to take data from input field and return feedback 
 const submitWord = () => {
-    const playerGuess = inputWord.value.toLowerCase();
+    playerGuess = inputWord.value.toLowerCase();
     letters = playerGuess.split("");
     console.log(playerGuess)
     console.log(letters)
     console.log(rightWord)
     inputWord.value="";
-//table.rows.length-1
 
 for (var i = 0; i < table.rows.length-1 ; i++)
 {
     // let cell = table.rows[Guess].cells[i]
-    //let cell = document.getElementById(`col${i}row${Guess}`)
-    table.rows[Guess].cells[i].innerHTML = letters[i]  
-}   
-    //check the word 
-    /*
-    if ( playerGuess == rightWord ){
-      let cell = document.getElementById(`col${i}row${Guess}`)
-      message.textContent = "congratulations! you found the right word ;)"
-      cell.style.backgroundColor='green'
-      inputWord.style.display="none";
-      submit.style.display="none";
-      next.style.display="block";
-    }
-    */
-// check the player guess 
-  
-    //the cells of the word will turn to green 
-    
-   // nextround()
+    cell = document.getElementById(`col${i}row${Guess}`)
+    cell.innerHTML = `${letters[i]}` ;
+    checkWord()
 }
-submit.addEventListener("click" , submitWord);
-/*
-const nextround = () => {
+}
+
+const checkWord = () => {
+
+    if ( playerGuess == rightWord ){
+        message.textContent = "congratulations! you found the right word ;)"
+        table.rows[Guess].style.backgroundColor='green'
+        inputWord.style.display="none";
+        submit.style.display="none";
+        next.style.display="block";
+        nextRound()
+}
+
+}
+
+const nextRound = () => {
+    for (let row of table.rows) {
+        // Loop through all cells in the row
+        for (let cell of row.cells) {
+          // Clear the content of each cell
+          cell.innerHTML = "";
+          cell.style.backgroundColor = ""; 
+        }
+      }
+    message.textContent = "Guess the 5-letters word"
     round++;
     rightWord = wordList[round];
-    next.style.display="none";
-    inputWord.style.display="block";
-    submit.style.display="block";
-    message.style.display="block"
-    submitWord()
+    
 }
-next.addEventListener("click" , nextround)
-}
-*/
+next.addEventListener("click" , nextRound);
+
+
 
