@@ -1,48 +1,74 @@
+
 body {
-margin: 20px;
-height: 100vh;  
-background-color:rgb(71, 71, 165);
+    background-size: cover; 
+    margin: 70px;
+    height: 100vh; 
+    background-color: rgb(110, 95, 136);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
+.game-container {
+    width: 90%;  
+    max-width: 900px;  
+    background-position: center;
+    border: 5px solid #fff; 
+    padding: 50px;
+    border-radius: 15px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
 table { 
-width: 25%;     
-border-collapse:separate;
-padding:0 0 0 110px ;
+    width: 60%;  
+    border-collapse: separate;
+    margin: 20px 0;
+    text-align: center;
+
 }
 
 tr, td {
-border: 1px solid hsl(102, 68%, 59%);
-padding: 15px; 
-display: flex;
-
+    color: #fbf9f9;
+    border: 1px solid hsl(282, 87%, 3%);
+    padding: 15px;
 }
+
 
 aside {
-flex-direction: column;
-position: relative;
-top: -400px;
-left: 380px;
-color:white;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 20px;
+    position: relative;
+    top: -40px;
+    right: -50px;
 }
 
-h1 {
-padding:0 130px 0 130px ;
-color: white;
+/* Centered text and buttons */
+h1, h2 {
+    text-align: center;
+    color: white;
 }
 
-h2 {
-padding:0 130px 0 130px ;
-color: white;
+button, input {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #6a3d8d;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
-button {
-position: relative;
-top: -390px;
-left : 120px;
+button:hover, input:hover {
+    background-color: #a14d98; /* Change the color when hovering */
 }
 
-input {
-position: relative;
-top: -390px;
-left : 140px;
+/* Hide elements by default */
+.hidden {
+    display: none;
 }

@@ -8,10 +8,13 @@
    <title>Wordle game!</title>
 </head>
 <body>
-    <nav>
+    
+
+    <div class="game-container">
+      <nav>
     <h1 id="title">Wordle game!</h1>
     <h2 id="message">message</h2>
-    </nav>
+    </nav>  
     <table id ="myTable">
     <tr id="row0" class="row">
         <td id="col0row0" class="col"></td>
@@ -58,27 +61,29 @@
 
     </table>
 <u></u>
-    <aside class="container">
+    
+    </aside>
+    <button id="start game" onclick="startGame()">start playing</button>
+    <input type="text" id="guessInput" maxlength="5" placeholder="Enter the word"> 
+    <button id="submit" class="hidden" onclick="submitWord()" >Submit Guess</button>
+    <button id="restart"  class="hidden" onclick="endGame()">restart </button>
+    <button id="next"  class="hidden" onclick="nextRound()">next</button>
+</div>
+<aside class="container">
         <h3 class ="Instruction"> Game instruction </h3>
         <p class ="Instruction">1- press start playing button to start the game. </p>
         <p class ="Instruction">2- after you start the game you are required to 
            <br> guess a five letter word and write it. </p>
         <p class ="Instruction">3- if your word match the game word you will 
-            <br>win  and earn a point, otherwise you will either 
-            <br>have a letters similar to the correct word or 
-            <br>a completely wrong  word.</p>
+            <br>win , otherwise you will either have a letters
+            <br>similar to the correct word or a completely
+            <br> wrong  word.</p>
         <p class ="Instruction">4- if you get a similar letters for the correct 
             <br> word, the color of the boxes of similar letters 
           <br>will change based on the place of letters: </p>
         <p class ="Instruction">green boxes : it indicates similar letters that 
             <br>are in the same plac of correct word </p>
-        <p class ="Instruction">yellow boxes : it indicates similar letters that 
+        <p class ="Instruction">grey boxes : it indicates similar letters that 
             <br> are in wrong place.</p>   
-    </aside>
-    <button id="start game" onclick="startGame()">start playing</button>
-    <input type="text" id="guessInput" maxlength="5" placeholder="Enter the word"> 
-    <button id="submit" class="hidden" onclick="submitWord()" >Submit Guess</button>
-    <button id="restart"  class="hidden" onclick="restartGame()">restart </button>
-    <button id="next"  class="hidden" onclick="nextRound()">next</button>
 </body>
 </html>
