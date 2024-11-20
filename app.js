@@ -45,8 +45,13 @@ start.addEventListener("click" , startGame);
 //function to take data from input field 
 const submitWord = () => {
     playerGuess = inputWord.value.toLowerCase();
+    if (playerGuess.length < 5){
+        message.textContent = `the word must be of 5 letters`;
+        message.style.color='red'
+    } else {
     letters = playerGuess.split("");
     inputWord.value="";
+    message.style.color='white'
 
 for (var i = 0; i < table.rows.length-1 ; i++)
 {
@@ -55,7 +60,7 @@ for (var i = 0; i < table.rows.length-1 ; i++)
     cell.innerHTML = `${letters[i]}` ;
 }   
 checkWord()
-}
+}}
 
 //check word function 
 const checkWord = () => {
